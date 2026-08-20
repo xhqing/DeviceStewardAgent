@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(top *)",
+      "Bash(ps *)",
+      "Bash(df *)",
+      "Bash(memory_pressure *)",
+      "Bash(ssh win-ai *)"
+    ]
+  }
+}
