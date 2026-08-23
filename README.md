@@ -17,7 +17,7 @@
 
 ## 🖥️ Alfred — Device Steward Agent
 
-**Alfred** is this project's **Device Steward Agent**. Named after Batman's butler Alfred Pennyworth — reliable, meticulous, keeping everything in perfect order — Alfred's job is **resource management**: monitoring and tending the health of your local Mac, remote servers, and cloud machines (processes / memory / storage), and giving you checkable cleanup and tuning advice, so every device stays fast and lightly loaded while the fleet works.
+**Alfred** is this project's **Device Steward Agent**. Named after Batman's butler Alfred Pennyworth — reliable, meticulous, keeping everything in perfect order — Alfred's job is **resource management**: monitoring and tending the health of your local Mac, remote servers, and cloud machines (processes / memory / storage), and giving you checkable cleanup and tuning advice, so every device stays fast and lightly loaded while the team works.
 
 Today Alfred ships with these capabilities:
 

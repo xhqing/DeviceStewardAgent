@@ -4,6 +4,13 @@
 
 格式参考 [Keep a Changelog](https://keepachangelog.com/zh-CN/1.1.0/)，版本号遵循 [语义化版本](https://semver.org/lang/zh-CN/)。
 
+## [未发布]
+
+### 变更（措辞统一 fleet → team / 舰队 → 团队：README 中英双语 + `.claude/CLAUDE.md` 跟随全局统一）
+
+- **为什么改**：用户 2026-08-16 已把 xhqing 主页 README 的自称从「舰队 / fleet」改为「团队 / team」，但本仓 README 中英两版与 `.claude/CLAUDE.md`（含同步到子项目 ResourceMonitor 的超集内容）仍是 fleet 旧措辞——外部读者沿「主页 → 各 agent 仓库」浏览会看到两种自称并存；2026-08-21 用户裁定全量存量一次清零、统一为团队 / team。
+- **改了什么**：`README.md` 1 处（while the fleet works → the team works）、`README_cn.md` 1 处（为全舰队干活供底 → 为全团队）、`.claude/CLAUDE.md` 3 处（「fleet 项目名」→「团队项目名」、为全 fleet 提供 → 为全团队、徽章缓存标记「按 fleet 徽章标准」→「按团队徽章标准」）并按超集关系同步 ResourceMonitor `.claude/CLAUDE.md`（diff 验证超集一致）。仅改措辞，职责、结构、徽章均不变。
+
 ## [1.0.0] - 2026-08-20
 
 ### 新增（项目立项：电脑管家 Agent Alfred）

@@ -2,10 +2,10 @@
 
 **拟人名**：Alfred
 **职称**：电脑管家（Device Steward Agent）
-**fleet 项目名**：DeviceStewardAgent
+**团队项目名**：DeviceStewardAgent
 **仓库**：xhqing/DeviceStewardAgent
 
-本项目是 Agent 项目，定位为「电脑管家 Alfred」——职责是**资源管理**：本地电脑 / 远程服务器 / 云电脑的资源监控与管理建议（进程 / 内存 / 存储治理），目标是让各设备始终处于低负载的流畅工作状态。名字取自 DC 漫画中蝙蝠侠的管家 Alfred Pennyworth——可靠、周到、把一切打理得井井有条。独立于销售流水线，为全 fleet 的 agent 提供设备资源保障。
+本项目是 Agent 项目，定位为「电脑管家 Alfred」——职责是**资源管理**：本地电脑 / 远程服务器 / 云电脑的资源监控与管理建议（进程 / 内存 / 存储治理），目标是让各设备始终处于低负载的流畅工作状态。名字取自 DC 漫画中蝙蝠侠的管家 Alfred Pennyworth——可靠、周到、把一切打理得井井有条。独立于销售流水线，为全团队的 agent 提供设备资源保障。
 
 ## 目录结构
 
@@ -23,7 +23,7 @@
 ## commit skill 检测缓存
 
 <!-- commit-skill: readme-standard = ok -->
-- README 中英双语 + LOGO + 徽章 + 版权署名：已就绪（2026-08-20 立项时按 fleet 徽章标准一次到位：License / Version / Type 三枚 + Visitors 访问量徽章）
+- README 中英双语 + LOGO + 徽章 + 版权署名：已就绪（2026-08-20 立项时按团队徽章标准一次到位：License / Version / Type 三枚 + Visitors 访问量徽章）
 
 <!-- commit-skill: license = ok -->
 - LICENSE.md：已存在，无冗余（2026-08-20 立项）
