@@ -11,6 +11,11 @@
 - **为什么改**：让不读 `.claude/CLAUDE.md` 而读 `AGENTS.md` 约定的工具（如 ZCode 等以 AGENTS.md 为指令入口的 agent）也能加载到本项目的角色规则，且两条入口指向同一份内容、避免双文件维护分叉（与 `.codebuddy/CODEBUDDY.md` 单一来源思路一致）。
 - **改了什么**：新建软链接 `AGENTS.md` → `.claude/CLAUDE.md`（相对路径，git 以符号链接形式跟踪，clone 后依然可解析）。
 
+### 新增（项目根 `TODO.md` 待办清单）
+
+- **为什么建**：全局规则（2026-08-01 立）要求所有「待办 / 未决」内容集中到项目根 `TODO.md` + `TODO-archive.md`（按紧急度分节、唯一编号），本项目一直缺失该文件；2026-09-07 排查本机 zcode 进程残留时产生首条待办（zcode-cli 会话退出孤儿残留，需反馈 Atlas 排查），首次触达即新建。
+- **改了什么**：新建项目根 `TODO.md`（头部含个人隐私类待办分流至 local 版指引），登记首条待办 **T1**（zcode 孤儿残留 → 反馈 FullStackEngineerAgent，🟡 黄色紧急度）。
+
 ### 变更（措辞统一 fleet → team / 舰队 → 团队：README 中英双语 + `.claude/CLAUDE.md` 跟随全局统一）
 
 - **为什么改**：用户 2026-08-16 已把 xhqing 主页 README 的自称从「舰队 / fleet」改为「团队 / team」，但本仓 README 中英两版与 `.claude/CLAUDE.md`（含同步到子项目 ResourceMonitor 的超集内容）仍是 fleet 旧措辞——外部读者沿「主页 → 各 agent 仓库」浏览会看到两种自称并存；2026-08-21 用户裁定全量存量一次清零、统一为团队 / team。
