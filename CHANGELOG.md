@@ -6,6 +6,16 @@
 
 ## [未发布]
 
+### 变更（全盘磁盘治理：可用空间 1.6G → 28G，使用率 91% → 37%）
+
+- **为什么改（2026-09-12）**：本机磁盘 228G 仅剩 1.6G（使用率 91%），已到影响系统稳定性的临界点；磁盘/存储治理是 Alfred（电脑管家）的本职职责，本次为全盘扫描 + 分级清理。
+- **改了什么**（按层级）：
+  1. **A 级零风险清理（约 12G）**：删 Downloads 中已装应用/重复版本的 dmg（富途 FTNN ×2、腾讯会议、Trae_CN ×2、Typeless、VSCode、WorkBuddy 旧版 ×3、VSCodium ×2，约 3.6G）；删照片智能分析缓存（`mediaanalysisd`，2.9G，删后自动重建）；删 Library/Caches 五项（VSCode ShipIt 898M、WorkBuddy BundleMigration 1.0G、Trae CN 880M、LarkShell 496M、trae ShipIt 36M）；清 npm 缓存（`~/.npm/_cacache` + `_npx` 约 1.8G）；`brew cleanup --prune=all`（41MB）。
+  2. **B 级用户授权删除（约 3.9G）**：删 `~/android-sdk`（3G，无任何项目/环境变量引用，`.zshrc` 中为条件式 PATH、目录不存在时无副作用）；删 `~/.rustup` + `~/.cargo`（864M，无 Rust 项目、cargo 不在 PATH）。
+  3. **C 级行情数据重压缩（省 14.8G）**：Intraday 项目 `data_tick` 全量 parquet 从 SNAPPY 重压缩为 ZSTD（41.70GB → 26.89GB，省 36%），逐文件三重验证全部通过——详见 Intraday 仓库 CHANGELOG 同日条目。
+  4. **保留待用户处理**：Chrome 缓存 + Service Worker 约 2.4G（运行中不动，待退出后清）；微信 5.9G（应用内清）；Downloads 中未装应用 dmg（ChatGPT/UTM/百度网盘等，待用户决定）。
+- **重压缩脚本**：`Intraday/tmp/recompress.py`（幂等可续跑）。
+
 ### 新增（项目根 `AGENTS.md` 软链接指向 `.claude/CLAUDE.md`）
 
 - **为什么改**：让不读 `.claude/CLAUDE.md` 而读 `AGENTS.md` 约定的工具（如 ZCode 等以 AGENTS.md 为指令入口的 agent）也能加载到本项目的角色规则，且两条入口指向同一份内容、避免双文件维护分叉（与 `.codebuddy/CODEBUDDY.md` 单一来源思路一致）。
