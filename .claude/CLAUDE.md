@@ -14,9 +14,9 @@
 - `.codebuddy/CODEBUDDY.md`：CodeBuddy 项目说明（一行引用 `../.claude/CLAUDE.md`，单一来源）。
 - 工具本体在子项目 **ResourceMonitor**（[xhqing/ResourceMonitor](https://github.com/xhqing/ResourceMonitor)，VSCode 扩展：整机资源监控 + AI 清理建议）。
 
-## 子项目清单（`.claude/` 超集关系）
+## 子项目清单
 
-本项目（Alfred）负责维护以下子项目，`.claude/` 与子项目 `.claude/` 之间维护「Agent 项目为权威源、子项目为超集」的关系（全局规则「Agent 项目与子项目的 `.claude/` 超集关系」，2026-08-10 立）：本文件全文随附进子项目 `.claude/CLAUDE.md`，其中「本项目」均指 DeviceStewardAgent。
+本项目（Alfred）负责维护以下子项目。**智能体专属文件（`CLAUDE.md`、`AGENTS.md`、`.claude/`、项目级 `.pi/` 等）只有 Agent 项目允许拥有，非 Agent 项目（含子项目）一律不得携带**（2026-10-12 用户修订，取代原「子项目 `.claude/` 超集」规则）——子项目的工作一律在本项目会话里按路径跨目录操作（如 `git -C <子项目目录>`）；通过 intercom / `agent_call` / `agent_wake` 为本 agent 开启后台会话时，工作目录只能是本项目根目录。细则见全局 `~/.claude/docs/agents-registry.md`「智能体专属文件归属与子项目映射（2026-10-12 修订）」节。
 
 - **DeviceStewardAgent（Alfred）→ ResourceMonitor**：独立仓库 [xhqing/ResourceMonitor](https://github.com/xhqing/ResourceMonitor)，VSCode 扩展——实时监控整台 Mac 的 CPU / 内存 / 磁盘资源，用 AI 把数据翻译成可勾选的清理动作并安全执行。
 
