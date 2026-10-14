@@ -4,7 +4,7 @@
 
 格式参考 [Keep a Changelog](https://keepachangelog.com/zh-CN/1.1.0/)，版本号遵循 [语义化版本](https://semver.org/lang/zh-CN/)。
 
-## [未发布]
+## [1.0.2] - 2026-10-14
 
 ### 变更（ResourceMonitor 子项目取消：清单节、目录结构节与 TODO 同步收尾）
 
