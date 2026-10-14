@@ -9,16 +9,16 @@
 
 ## 目录结构
 
-- 根目录 README：Agent 项目（Alfred）对外说明，指向子项目 ResourceMonitor 的工具文档。
+- 根目录 README：Agent 项目（Alfred）对外说明，指向 ResourceMonitor 的工具文档（原子项目，2026-10-14 取消维护）。
 - `.claude/`：本项目独有的能力与配置目录（settings 等）。**不放与全局重复的通用能力**——通用 skills / rules 从全局 `~/.claude/` 或 CapabilityManagerAgent 的 `claude/` 开源镜像获取（「通用能力开源单一出口」规则，2026-08-09 立）。
 - `.codebuddy/CODEBUDDY.md`：CodeBuddy 项目说明（一行引用 `../.claude/CLAUDE.md`，单一来源）。
-- 工具本体在子项目 **ResourceMonitor**（[xhqing/ResourceMonitor](https://github.com/xhqing/ResourceMonitor)，VSCode 扩展：整机资源监控 + AI 清理建议）。
+- 工具本体原为子项目 **ResourceMonitor**（[xhqing/ResourceMonitor](https://github.com/xhqing/ResourceMonitor)，VSCode 扩展：整机资源监控 + AI 清理建议）——2026-10-14 取消维护，远端仓库保留为存档。
 
 ## 子项目清单
 
-本项目（Alfred）负责维护以下子项目。**智能体专属文件（`CLAUDE.md`、`AGENTS.md`、`.claude/`、项目级 `.pi/` 等）只有 Agent 项目允许拥有，非 Agent 项目（含子项目）一律不得携带**（2026-10-12 用户修订，取代原「子项目 `.claude/` 超集」规则）——子项目的工作一律在本项目会话里按路径跨目录操作（如 `git -C <子项目目录>`）；通过 intercom / `agent_call` / `agent_wake` 为本 agent 开启后台会话时，工作目录只能是本项目根目录。细则见全局 `~/.claude/docs/agents-registry.md`「智能体专属文件归属与子项目映射（2026-10-12 修订）」节。
+暂无子项目。原 **ResourceMonitor** 已按 2026-10-14 用户决定取消、不再维护——本地项目资料删除，GitHub 远端仓库保留为存档。
 
-- **DeviceStewardAgent（Alfred）→ ResourceMonitor**：独立仓库 [xhqing/ResourceMonitor](https://github.com/xhqing/ResourceMonitor)，VSCode 扩展——实时监控整台 Mac 的 CPU / 内存 / 磁盘资源，用 AI 把数据翻译成可勾选的清理动作并安全执行。
+**智能体专属文件（`CLAUDE.md`、`AGENTS.md`、`.claude/`、项目级 `.pi/` 等）只有 Agent 项目允许拥有，非 Agent 项目（含子项目）一律不得携带**（2026-10-12 用户修订，取代原「子项目 `.claude/` 超集」规则）——子项目的工作一律在本项目会话里按路径跨目录操作（如 `git -C <子项目目录>`）；通过 intercom / `agent_call` / `agent_wake` 为本 agent 开启后台会话时，工作目录只能是本项目根目录。细则见全局 `~/.claude/docs/agents-registry.md`「智能体专属文件归属与子项目映射（2026-10-12 修订）」节。
 
 ## commit skill 检测缓存
 

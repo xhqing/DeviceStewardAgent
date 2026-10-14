@@ -4,6 +4,13 @@
 
 格式参考 [Keep a Changelog](https://keepachangelog.com/zh-CN/1.1.0/)，版本号遵循 [语义化版本](https://semver.org/lang/zh-CN/)。
 
+## [未发布]
+
+### 变更（ResourceMonitor 子项目取消：清单节、目录结构节与 TODO 同步收尾）
+
+- **为什么改（2026-10-14）**：用户决定取消子项目 ResourceMonitor、不再维护——本地项目资料删除（由 Kit 统一执行）、GitHub 远端仓库保留为存档（删除前已核验该仓库干净、提交全部已推送）；本仓「子项目清单」节、目录结构节与 TODO 中的相关条目需同步收尾。
+- **改了什么**：① `.claude/CLAUDE.md`（`AGENTS.md` 为其符号链接）「子项目清单」节移除 ResourceMonitor 条目，改为「暂无子项目 + 已取消说明」并保留 2026-10-12 新规说明句；目录结构节两行（README 指向行、工具本体行）改为存档表述；② `TODO.md` 的 **T1**（zcode-cli 孤儿进程反馈 Atlas 排查——zcode-cli 已随本轮决定取消、不再维护）移入新建的 `TODO-archive.md`，标 ✅已放弃；`TODO.md` 清空为「暂无未完成待办」；③ 新建 `TODO-archive.md`（本项目首个归档批次）。
+
 ## [1.0.1] - 2026-10-12
 
 ### 变更（子项目智能体专属文件归位：ResourceMonitor 清理 + 本仓「子项目清单」节更新）
