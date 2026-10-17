@@ -4,7 +4,7 @@
 
 格式参考 [Keep a Changelog](https://keepachangelog.com/zh-CN/1.1.0/)，版本号遵循 [语义化版本](https://semver.org/lang/zh-CN/)。
 
-## [未发布]
+## [1.0.3] - 2026-10-17
 
 ### 变更（采纳「Agent 进驻子项目」新规：专属文件归属段措辞更新 + 新增项目级 `.pi/` 目录）
 
